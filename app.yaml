@@ -27,7 +27,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: 80
+    targetPort: 8082
   selector:
     app: playground-app
 
@@ -37,8 +37,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: playground-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - http:
@@ -49,4 +47,4 @@ spec:
           service:
             name: playground-app
             port:
-              number: 80
+              number: 8082
