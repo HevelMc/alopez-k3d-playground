@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: playground-app
+  name: svc-playground-app
 spec:
   ports:
   - port: 80
@@ -36,7 +36,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: playground-ingress
+  name: ingress-playground-app
 spec:
   rules:
     - http:
@@ -45,6 +45,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: playground-app
+            name: svc-playground-app
             port:
               number: 8082
