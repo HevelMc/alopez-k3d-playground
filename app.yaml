@@ -25,9 +25,11 @@ kind: Service
 metadata:
   name: svc-playground-app
 spec:
+  type: NodePort
   ports:
   - port: 80
-    targetPort: 8082
+    targetPort: 80
+    nodePort: 30081
   selector:
     app: playground-app
 
