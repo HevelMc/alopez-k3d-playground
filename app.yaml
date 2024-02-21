@@ -13,7 +13,7 @@ spec:
         app: playground-app
     spec:
       containers:
-      - image: hevelmc/playground:v1
+      - image: hevelmc/playground:v2
         name: playground-app
         ports:
         - containerPort: 80
