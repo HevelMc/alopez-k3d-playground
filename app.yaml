@@ -31,20 +31,3 @@ spec:
   selector:
     app: playground-app
 
----
-
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: ingress-playground-app
-spec:
-  rules:
-    - http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: svc-playground-app
-            port:
-              number: 8082
