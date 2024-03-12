@@ -13,7 +13,7 @@ spec:
         app: playground-app
     spec:
       containers:
-      - image: hevelmc/alopez-playground:v2
+      - image: hevelmc/alopez-playground:v1
         name: playground-app
         ports:
         - containerPort: 80
