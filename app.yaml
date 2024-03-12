@@ -13,7 +13,7 @@ spec:
         app: playground-app
     spec:
       containers:
-      - image: hevelmc/alopez-playground:v1
+      - image: hevelmc/gscalisi-playground:v1
         name: playground-app
         ports:
         - containerPort: 80
@@ -32,4 +32,3 @@ spec:
     nodePort: 30082
   selector:
     app: playground-app
-
